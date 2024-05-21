@@ -31,17 +31,23 @@ overflow: hidden;
     height: 14rem;
     width: 14rem;
     border-radius: 50%;
-    padding: 2rem;
+    padding: 1rem;
     display : flex; 
     justify-content: center; 
     align-items : center; 
-    transition: left 5s ;
+    transition: left 4s ;
     position: relative;
-    animation: upToDown 10s infinite ;
+    /* animation: upToDown ; */
+    
     left: 0rem;
     /* top: 0; */
 }
-.circle:hover{
+.start-animation{
+    animation-name: upToDown;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+.circle-hover:hover{
     /* animation-play-state: paused; */
     /* transform: translateX(100px); */
     cursor: pointer;
@@ -49,13 +55,17 @@ overflow: hidden;
     left: 100vw;
 }
 @keyframes upToDown {
-    from {
+    0% {
         /* transform: translateY(0px) translateX(0px);  */
         /* transform: translateY(0px); */
 
-top:-10vh;
+top:0vh;
     }
-    to {
+    5% {
+        top:0vh;
+    }
+    
+    100% {
         /* transform: translateY(200px) translateX(200px);  */
         /* transform: translateY(110vh); */
         top: 100vh;
@@ -66,13 +76,28 @@ top:-10vh;
 
 
 .hole{
-padding: 4rem;
+padding: 6rem;
 background-color: black;
 border-radius: 50%;
 height: 4rem;
 display: inline-block;
 }
+.hole:hover{
+    background-color: white;
+}
 
-.circle:hover{
-    
+#start-btn{
+    position: fixed;
+    padding: .5rem 1rem;
+    color: yellow;
+    right: 4%;
+    top: 4%;
+    border: 2px solid yellow;
+    background-color: black;
+    transition: .3s all;
+    cursor: pointer;
+}
+#start-btn:hover{
+color: black;
+background-color: yellow;
 }
