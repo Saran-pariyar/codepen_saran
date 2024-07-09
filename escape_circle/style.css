@@ -45,13 +45,13 @@ overflow: hidden;
 .start-animation{
     animation-name: upToDown;
     animation-duration: 10s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 1;
 }
 .circle-hover:hover{
     /* animation-play-state: paused; */
     /* transform: translateX(100px); */
     cursor: pointer;
-    background-color: green;
+    background-color: yellow;
     left: 100vw;
 }
 @keyframes upToDown {
@@ -83,7 +83,7 @@ height: 4rem;
 display: inline-block;
 }
 .hole:hover{
-    background-color: white;
+    background-color: yellow;
 }
 
 #start-btn{
