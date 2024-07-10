@@ -38,7 +38,6 @@ overflow: hidden;
     transition: left 4s ;
     position: relative;
     /* animation: upToDown ; */
-    
     left: 0rem;
     /* top: 0; */
 }
