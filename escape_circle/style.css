@@ -13,7 +13,7 @@ overflow: hidden;
     overflow: hidden;
     display: flex;
     /* justify-content: space-around; */
-    border-right: 2px solid yellow;
+    border-right: 1vw solid yellow;
 }
 /* .container::before{
     content: "Escape";
@@ -35,7 +35,7 @@ overflow: hidden;
     display : flex; 
     justify-content: center; 
     align-items : center; 
-    transition: left 4s ;
+    transition: left 3s ;
     position: relative;
     /* animation: upToDown ; */
     left: 0rem;
@@ -51,7 +51,7 @@ overflow: hidden;
     /* transform: translateX(100px); */
     cursor: pointer;
     background-color: yellow;
-    left: 100vw;
+    left: 95%;
 }
 @keyframes upToDown {
     0% {
@@ -74,7 +74,7 @@ top:0vh;
 
 
 
-.hole{
+/* .hole{
 padding: 6rem;
 background-color: black;
 border-radius: 50%;
@@ -83,7 +83,7 @@ display: inline-block;
 }
 .hole:hover{
     background-color: yellow;
-}
+} */
 
 #start-btn{
     position: fixed;

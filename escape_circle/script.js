@@ -6,9 +6,12 @@ let width = window.innerWidth;
 
 function startGame(){
 
+    // startBtn.innerText = "Start" ?  startBtn.innerText = "Reset" : startBtn.innerText = "Start" ;
+
+    startBtn.innerText = startBtn.innerText === "Start" ? "Reset" : "Start"
 
     circle.classList.toggle("start-animation");
-    // circle.classList.toggle("circle-hover");
+    circle.classList.toggle("circle-hover");
     // console.log(mode);
 
     
@@ -21,16 +24,17 @@ function startGame(){
     //     setTimeout((console.log(circlePosition)), 1000)
         
     // }
-    if(startBtn.innerText = "Reset"){
+
+    // if(startBtn.innerText = "Reset"){
         // first get the value of place of circle when hover using setInterval and circle.offsetLeft
         // then we can find when it will touch the left part and make the wall glow green when touched.
-    }
+    // }
     
 
 }
 
 
-startBtn.addEventListener("click",startGame)
+startBtn.addEventListener("click", startGame)
 
 function hitWall(){
 
