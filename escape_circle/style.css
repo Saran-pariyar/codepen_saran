@@ -1,102 +1,69 @@
-*{
-margin : 0;
-padding : 0;
-box-sizing : border-box;
-overflow: hidden;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
-.container{
-    background-color: black;
-    height: 100vh;
-    width: 100vw;
-    padding: 1rem;
-    overflow: hidden;
-    display: flex;
-    /* justify-content: space-around; */
-    border-right: 1vw solid yellow;
+.container {
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+  padding: 1rem;
+  overflow: hidden;
+  display: flex;
+  border-right: 1vw solid yellow;
 }
-/* .container::before{
-    content: "Escape";
-    color: white;
-    display : flex; 
-    justify-content: center; 
-    align-items : center; border : 2px solid red ;
-    width: 100%;
-    position: absolute; 
-    
-} */
-.circle{
-    /* padding: 1rem; */
-    background: white;
-    height: 14rem;
-    width: 14rem;
-    border-radius: 50%;
-    padding: 1rem;
-    display : flex; 
-    justify-content: center; 
-    align-items : center; 
-    transition: left 3s ;
-    position: relative;
-    /* animation: upToDown ; */
-    left: 0rem;
-    /* top: 0; */
+
+.circle {
+  background: white;
+  height: 14rem;
+  width: 14rem;
+  border-radius: 50%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: left 3s;
+  position: relative;
+  left: 0rem;
 }
-.start-animation{
-    animation-name: upToDown;
-    animation-duration: 10s;
-    animation-iteration-count: 1;
+.start-animation {
+  animation-name: upToDown;
+  animation-duration: 10s;
+  animation-iteration-count: 1;
 }
-.circle-hover:hover{
-    /* animation-play-state: paused; */
-    /* transform: translateX(100px); */
-    cursor: pointer;
-    background-color: yellow;
-    left: 95%;
+.circle-hover:hover {
+  cursor: pointer;
+  background-color: yellow;
+  left: 95%;
 }
 @keyframes upToDown {
-    0% {
-        /* transform: translateY(0px) translateX(0px);  */
-        /* transform: translateY(0px); */
+  0% {
+    top: 0vh;
+  }
+  5% {
+    top: 0vh;
+  }
 
-top:0vh;
-    }
-    5% {
-        top:0vh;
-    }
-    
-    100% {
-        /* transform: translateY(200px) translateX(200px);  */
-        /* transform: translateY(110vh); */
-        top: 100vh;
-
-    }
+  100% {
+    top: 100vh;
+  }
 }
 
-
-
-/* .hole{
-padding: 6rem;
-background-color: black;
-border-radius: 50%;
-height: 4rem;
-display: inline-block;
+#start-btn {
+  position: fixed;
+  padding: 0.5rem 1rem;
+  color: yellow;
+  right: 4%;
+  top: 4%;
+  border: 2px solid yellow;
+  background-color: black;
+  transition: 0.3s all;
+  cursor: pointer;
 }
-.hole:hover{
-    background-color: yellow;
-} */
 
-#start-btn{
-    position: fixed;
-    padding: .5rem 1rem;
-    color: yellow;
-    right: 4%;
-    top: 4%;
-    border: 2px solid yellow;
-    background-color: black;
-    transition: .3s all;
-    cursor: pointer;
-}
-#start-btn:hover{
-color: black;
-background-color: yellow;
+#start-btn:hover {
+  color: black;
+  background-color: yellow;
 }
