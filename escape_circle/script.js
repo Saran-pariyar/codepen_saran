@@ -1,7 +1,7 @@
 const startBtn = document.getElementById("start-btn");
 const circle = document.getElementById("circle")
 // let mode = "Stopped";
-let width = window.innerWidth;
+let screenWidth = window.innerWidth;
 
 
 function startGame(){
@@ -15,7 +15,9 @@ function startGame(){
     // console.log(mode);
 
     
-    
+// let ballRect = ball.getBoundingClientRect()
+
+
     // mode = !mode
     // startBtn.innerText = 10
     // console.log('H');
@@ -39,3 +41,19 @@ startBtn.addEventListener("click", startGame)
 function hitWall(){
 
 }
+
+
+
+animatedElement.addEventListener('animationstart', (event) => {
+    console.log('Animation started:', event);
+  });
+
+  
+  animatedElement.addEventListener('animationend', (event) => {
+    console.log('Animation ended:', event);
+  });
+
+  
+  animatedElement.addEventListener('animationiteration', (event) => {
+    console.log('Animation iteration:', event);
+});
