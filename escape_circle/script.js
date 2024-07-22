@@ -2,6 +2,24 @@ const startBtn = document.getElementById("start-btn");
 const circle = document.getElementById("circle")
 // let mode = "Stopped";
 let screenWidth = window.innerWidth;
+// let count = 0;
+function getCirclePosition (){
+  let circleRect = circle.getBoundingClientRect();
+  // console.log(circleRect.left);
+  // console.log("Now next:")
+  // console.log(screenWidth)
+
+  // count++;
+  if (circleRect.left >= 1090) {
+    clearInterval(circleInterval); 
+    // console.log('Interval cleared');
+    console.log(circleRect.left);
+    alert("Level 1 Completed!")
+  }
+
+}
+
+const circleInterval = setInterval(getCirclePosition, 200)
 
 
 function startGame(){
@@ -42,7 +60,7 @@ function hitWall(){
 
 }
 
-
+/*
 
 animatedElement.addEventListener('animationstart', (event) => {
     console.log('Animation started:', event);
@@ -57,3 +75,5 @@ animatedElement.addEventListener('animationstart', (event) => {
   animatedElement.addEventListener('animationiteration', (event) => {
     console.log('Animation iteration:', event);
 });
+
+*/
