@@ -4,8 +4,161 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saran Codepens</title>
+    <style>
+        body, h1, p, a {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #121212;
+            color: #f0f0f0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            min-height: 80vh;
+            padding: 20px;
+            position: relative;display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #00ff99;
+            margin-bottom: 40px;
+            text-shadow: 0 0 10px rgba(0, 255, 153, 0.8);
+        }
+
+        .project-card {
+            background-color: rgba(33, 33, 33, 0.9);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+            max-width: 400px;
+            margin: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 255, 153, 0.5);
+        }
+
+        .project-card a {
+            display: block;
+            padding: 10px;
+            font-size: 1.2rem;
+            color: #00ff99;
+            background-color: #1e1e1e;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background-color 0.3s, color 0.3s;
+            margin-top: 15px;
+        }
+
+        .project-card a:hover {
+            background-color: #00ff99;
+            color: #1e1e1e;
+        }
+
+        .animated-shape {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.7;
+            z-index: 0;
+            animation: moveShape linear infinite;
+        }
+
+        .shape-1 {
+            background: linear-gradient(45deg, #ff0081, #ff8c00);
+            width: 150px;
+            height: 150px;
+            top: -10%;
+            left: -10%;
+            animation-duration: 8s;
+        }
+
+        .shape-2 {
+            background: linear-gradient(45deg, #00bfff, #ff6347);
+            width: 100px;
+            height: 100px;
+            top: 20%;
+            left: 10%;
+            animation-duration: 10s;
+        }
+
+        .shape-3 {
+            background: linear-gradient(45deg, #32cd32, #ffd700);
+            width: 200px;
+            height: 200px;
+            top: 50%;
+            left: 40%;
+            animation-duration: 12s;
+        }
+
+        .shape-4 {
+            background: linear-gradient(45deg, #ff1493, #1e90ff);
+            width: 120px;
+            height: 120px;
+            top: 60%;
+            left: 70%;
+            animation-duration: 15s;
+        }
+
+        @keyframes moveShape {
+            0% {
+                transform: translate(0, 0);
+            }
+            50% {
+                transform: translate(50vw, 50vh);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            .project-card {
+                padding: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <a href="escape_circle/index.html" target="_blank">Checkout Escape Circle</a>
+    <div class="animated-shape shape-1"></div>
+    <div class="animated-shape shape-2"></div>
+    <div class="animated-shape shape-3"></div>
+    <div class="animated-shape shape-4"></div>
+    <div class="container">
+        <h1>Saran's Codepens</h1>
+        <div class="project-card">
+            <h2>Escape Circle</h2>
+            <p>An engaging game where you escape the circle. Click below to play!</p>
+            <a href="escape_circle/index.html" target="_blank">View Project</a>
+        </div>
+        <!-- Add more project cards here -->
+        <!-- Example:
+        <div class="project-card">
+            <h2>Project Title</h2>
+            <p>Short project description goes here.</p>
+            <a href="project_link.html" target="_blank">View Project</a>
+        </div>
+        -->
+    </div>
 </body>
 </html>
