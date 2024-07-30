@@ -140,25 +140,35 @@
     </style>
 </head>
 <body>
-    <div class="animated-shape shape-1"></div>
-    <div class="animated-shape shape-2"></div>
-    <div class="animated-shape shape-3"></div>
-    <div class="animated-shape shape-4"></div>
+    <!-- Add role attribute for better screen reader accessibility -->
+    <div class="animated-shape shape-1" role="img" aria-label="Decorative shape 1"></div>
+    <div class="animated-shape shape-2" role="img" aria-label="Decorative shape 2"></div>
+    <div class="animated-shape shape-3" role="img" aria-label="Decorative shape 3"></div>
+    <div class="animated-shape shape-4" role="img" aria-label="Decorative shape 4"></div>
+    
     <div class="container">
-        <h1>Saran's Codepens</h1>
-        <div class="project-card">
-            <h2>Escape Circle</h2>
-            <p>An engaging game where you escape the circle. Click below to play!</p>
-            <a href="escape_circle/index.html" target="_blank">View Project</a>
-        </div>
+        <!-- Use a header element for the main heading -->
+        <header>
+            <h1>Saran's Codepens</h1>
+        </header>
+        
+        <!-- Use a section element to group related content -->
+        <section class="project-card" aria-labelledby="escape-circle-title">
+            <h2 id="escape-circle-title">Escape Circle</h2>
+            <p>Touch the ball till it hits the wall and you win!</p>
+            <!-- Add aria-label for a more descriptive link text -->
+            <a href="escape_circle/index.html" target="_blank" aria-label="Play Escape Circle game">Play</a>
+        </section>
+
         <!-- Add more project cards here -->
         <!-- Example:
-        <div class="project-card">
-            <h2>Project Title</h2>
+        <section class="project-card" aria-labelledby="project-title-1">
+            <h2 id="project-title-1">Project Title</h2>
             <p>Short project description goes here.</p>
-            <a href="project_link.html" target="_blank">View Project</a>
-        </div>
+            <a href="project_link.html" target="_blank" aria-label="View Project Title project">View Project</a>
+        </section>
         -->
     </div>
 </body>
+
 </html>
