@@ -4,6 +4,27 @@ let screenWidth = window.innerWidth;
 let scoreElement = document.getElementById("score-count")
 let playerScore = 0;
 
+
+function resetGame(){
+
+  // circle.style.animationPlayState = 'paused'; // Modern approach
+
+circle.style.transition = "none"
+  circle.style.transitionDuration = "none"
+
+  circle.style.left="0%"
+    circle.style.top="0%"
+
+  
+  
+  circle.classList.remove("start-animation")
+  // circle.classList.remove("circle-hover")
+
+  
+
+
+
+}
 function getCirclePosition() {
   let circleRect = circle.getBoundingClientRect();
   let rightEdge = circleRect.right;
@@ -11,12 +32,17 @@ function getCirclePosition() {
   if (rightEdge >= screenWidth) {
     clearInterval(circleInterval);
     // circle.style.cssText = "top:0; left:0;"
-    circle.style.left="0"
-    circle.style.top="0"
-
+    
     alert("Level 1 Completed!");
     playerScore++
     scoreElement.innerText = playerScore
+    resetGame()
+    startBtn.innerText = "Start"
+
+  
+
+
+
   }
 }
 
@@ -25,8 +51,8 @@ let circleInterval;
 function startGame() {
   startBtn.innerText = startBtn.innerText === "Start" ? "Reset" : "Start";
 
-  circle.classList.toggle("start-animation");
-  circle.classList.toggle("circle-hover");
+  circle.classList.add("start-animation");
+  circle.classList.add("circle-hover");
 
   if (startBtn.innerText === "Reset") {
     circleInterval = setInterval(getCirclePosition, 100);

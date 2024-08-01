@@ -24,7 +24,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: left 3s;
   position: relative;
   left: 0rem;
 }
@@ -32,6 +31,8 @@
   animation-name: upToDown;
   animation-duration: 15s;
   animation-iteration-count: 1;
+  transition: left 3s;
+animation-play-state: running;
 }
 .circle-hover:hover {
   cursor: pointer;

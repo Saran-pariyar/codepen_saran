@@ -1,2 +1,5 @@
 1. We get 3 chances, then it's game again and score will reset.
 2. Ball becomes smaller with each level.
+
+Have two buttons for start and reset,
+Hide buttons when game is on.
