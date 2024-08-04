@@ -68,3 +68,17 @@ startBtn.addEventListener("click", startGame);
 window.addEventListener("resize", () => {
   screenWidth = window.innerWidth;
 });
+
+
+
+// menu 
+
+document.getElementById('start-game-btn').addEventListener('click', function() {
+  const startMenu = document.getElementById('start-menu');
+  startMenu.classList.add('fade-out');
+
+  setTimeout(function() {
+      startMenu.style.display = 'none';
+      document.getElementById('game-container').style.display = 'block';
+  }, 1000);
+});
